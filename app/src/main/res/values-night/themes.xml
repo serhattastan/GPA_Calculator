@@ -3,5 +3,11 @@
     <style name="Base.Theme.GPACalculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:windowBackground">@color/background_color</item>
+        <item name="android:statusBarColor">@color/secondary_color_system</item>
+        <item name="android:navigationBarColor">@color/secondary_color_system</item>
+    </style>
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/secondary_color</item>
     </style>
 </resources>

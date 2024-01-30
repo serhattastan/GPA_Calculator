@@ -1,11 +1,20 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    //Navigation
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
     namespace = "com.cloffygames.gpacalculator"
     compileSdk = 34
+
+    buildFeatures{
+        //ViewBinding
+        viewBinding = true
+        //DataBinding
+        dataBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.cloffygames.gpacalculator"
