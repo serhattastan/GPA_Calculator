@@ -3,11 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/mainActivity2">
+    app:startDestination="@id/mainFragment">
 
-    <activity
-        android:id="@+id/mainActivity2"
-        android:name="com.cloffygames.gpacalculator.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.cloffygames.gpacalculator.ui.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_departmentFragment"
+            app:destination="@id/departmentFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addDepartmentFragment"
+            app:destination="@id/addDepartmentFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_semesterFragment"
+            app:destination="@id/semesterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.cloffygames.gpacalculator.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDepartmentFragment"
+        android:name="com.cloffygames.gpacalculator.ui.AddDepartmentFragment"
+        android:label="fragment_add_department"
+        tools:layout="@layout/fragment_add_department" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.cloffygames.gpacalculator.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/semesterFragment"
+        android:name="com.cloffygames.gpacalculator.ui.SemesterFragment"
+        android:label="fragment_semester"
+        tools:layout="@layout/fragment_semester" />
+    <fragment
+        android:id="@+id/departmentFragment"
+        android:name="com.cloffygames.gpacalculator.ui.DepartmentFragment"
+        android:label="fragment_department"
+        tools:layout="@layout/fragment_department" />
 </navigation>
