@@ -6,13 +6,154 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainFragment">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/mainPageAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="119dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/font_feather_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/primary_color"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/mainPageLogo"
+        app:layout_constraintEnd_toStartOf="@+id/mainPageLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mainPageLogo" />
+
+    <ImageView
+        android:id="@+id/mainPageLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/gpa_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/primary_color"
+                app:cardCornerRadius="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/departmentNameTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bölüm Adı:"
+                            android:textColor="@color/ic_launcher_background" />
+
+                        <TextView
+                            android:id="@+id/departmentName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bilgisayar Mühendisliği"
+                            android:textColor="@color/background_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/GPATitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="GPA:"
+                            android:textColor="@color/ic_launcher_background" />
+
+                        <TextView
+                            android:id="@+id/GPAText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3.15"
+                            android:textColor="@color/background_color" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/departmentDeleteButton"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/delete_icon" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/fastCalculateButton"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="32dp"
+        android:text="Hızlı Hesaplama"
+        android:textColor="@color/primary_color"
+        android:textSize="18sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/ic_launcher_background"
+        app:strokeColor="@color/primary_color"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/addDepartmentButton"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="32dp"
+        app:icon="@drawable/plus_icon"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/primary_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.611"
+        app:layout_constraintStart_toEndOf="@+id/fastCalculateButton"
+        app:rippleColor="@color/ic_launcher_background"
+        app:strokeColor="@color/primary_color"
+        app:strokeWidth="2dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
