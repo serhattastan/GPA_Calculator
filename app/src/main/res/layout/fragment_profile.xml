@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="50dp"
                     android:layout_weight="1"
-                    android:text="School: " />
+                    android:text="@string/label_school_name" />
 
                 <TextView
                     android:id="@+id/schoolName"
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="50dp"
                     android:layout_weight="1"
-                    android:text="Faculty: " />
+                    android:text="@string/label_faculty_name" />
 
                 <TextView
                     android:id="@+id/facultyName"
@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="50dp"
                     android:layout_weight="1"
-                    android:text="Department: " />
+                    android:text="@string/label_department_name_profile" />
 
                 <TextView
                     android:id="@+id/departmentName"
@@ -145,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="50dp"
                     android:layout_weight="1"
-                    android:text="Age: " />
+                    android:text="@string/label_age" />
 
                 <TextView
                     android:id="@+id/ageNumber"
@@ -174,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="50dp"
                     android:layout_weight="1"
-                    android:text="Gender: " />
+                    android:text="@string/label_gender" />
 
                 <TextView
                     android:id="@+id/genderName"

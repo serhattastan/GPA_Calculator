@@ -26,19 +26,14 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
-            android:id="@+id/action_profileFragment2_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            android:id="@+id/action_profileFragment_to_loginFragment2"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/addDepartmentFragment"
         android:name="com.cloffygames.gpacalculator.ui.AddDepartmentFragment"
         android:label="fragment_add_department"
         tools:layout="@layout/fragment_add_department" />
-    <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.cloffygames.gpacalculator.ui.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/semesterFragment"
         android:name="com.cloffygames.gpacalculator.ui.SemesterFragment"
@@ -49,4 +44,18 @@
         android:name="com.cloffygames.gpacalculator.ui.DepartmentFragment"
         android:label="fragment_department"
         tools:layout="@layout/fragment_department" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.cloffygames.gpacalculator.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment2"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.cloffygames.gpacalculator.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
 </navigation>

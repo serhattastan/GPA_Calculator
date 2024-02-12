@@ -75,7 +75,7 @@
                             android:id="@+id/departmentNameTitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Bölüm Adı:"
+                            android:text="@string/label_department_name"
                             android:textColor="@color/ic_launcher_background" />
 
                         <TextView
@@ -96,7 +96,7 @@
                             android:id="@+id/GPATitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="GPA:"
+                            android:text="@string/label_GPA"
                             android:textColor="@color/ic_launcher_background" />
 
                         <TextView
@@ -129,7 +129,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="32dp"
-        android:text="Hızlı Hesaplama"
+        android:text="@string/button_fast_calculate"
         android:textColor="@color/primary_color"
         android:textSize="18sp"
         app:cornerRadius="20dp"
