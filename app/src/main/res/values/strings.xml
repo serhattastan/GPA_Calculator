@@ -43,7 +43,7 @@
     <string name="text_department_name">Department Name:</string>
     <string name="text_semester">Number of Semester:</string>
     <string name="text_grade_system">Grade System:</string>
-
+    <string name="text_add_department">Add</string>
 
 
 </resources>
