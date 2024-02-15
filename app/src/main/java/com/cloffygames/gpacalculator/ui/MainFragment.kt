@@ -27,6 +27,15 @@ class MainFragment : Fragment() {
             Navigation.findNavController(it).navigate(transfer)
         }
 
+        binding.departmentCard.setOnClickListener{
+            val transfer = MainFragmentDirections.actionMainFragmentToDepartmentFragment()
+            Navigation.findNavController(it).navigate(transfer)
+        }
+
+        binding.departmentDeleteButton.setOnClickListener{
+
+        }
+
 
         return binding.root
     }
