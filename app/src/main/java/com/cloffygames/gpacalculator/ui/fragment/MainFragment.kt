@@ -1,23 +1,41 @@
-package com.cloffygames.gpacalculator.ui
+package com.cloffygames.gpacalculator.ui.fragment
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.SearchView.OnQueryTextListener
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.cloffygames.gpacalculator.MainActivity
-import com.cloffygames.gpacalculator.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.cloffygames.gpacalculator.data.entity.Department
 import com.cloffygames.gpacalculator.databinding.FragmentMainBinding
+import com.cloffygames.gpacalculator.ui.adapter.DepartmentAdapter
 
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         binding = FragmentMainBinding.inflate(inflater, container, false)
+
+        binding.departmentsView.layoutManager = LinearLayoutManager(requireContext())
+        val departmentList = ArrayList<Department>()
+        val d1 = Department(1,"Bilgisayar Mühendisliği", 2.85)
+        val d2 = Department(1,"Makine Mühendisliği", 2.35)
+        val d3 = Department(1,"Elektronik Mühendisliği", 3.85)
+        val d4 = Department(1,"Endüstri Mühendisliği", 2.65)
+        val d5 = Department(1,"Mekatronik Mühendisliği", 1.85)
+        val d6 = Department(1,"Orman Mühendisliği", 4.00)
+        departmentList.add(d1)
+        departmentList.add(d2)
+        departmentList.add(d3)
+        departmentList.add(d4)
+        departmentList.add(d5)
+        departmentList.add(d6)
+
+        val departmentAdapter = DepartmentAdapter(requireContext(), departmentList)
+        binding.departmentsView.adapter = departmentAdapter
 
         // binding.addDepartmentButton tıklandığında bir işlem yapmak için bir tıklama dinleyicisi eklenir.
         binding.addDepartmentButton.setOnClickListener{
@@ -33,18 +51,6 @@ class MainFragment : Fragment() {
             val transfer = MainFragmentDirections.actionMainFragmentToSemesterFragment()
             // Oluşturulan action kullanılarak fragment geçişi gerçekleştirilir.
             Navigation.findNavController(it).navigate(transfer)
-        }
-
-        // binding.departmentCard tıklandığında bir işlem yapmak için bir tıklama dinleyicisi eklenir.
-        binding.departmentCard.setOnClickListener{
-            // Ana fragmentten Departman fragmentine geçişi sağlayan bir action oluşturulur.
-            val transfer = MainFragmentDirections.actionMainFragmentToDepartmentFragment()
-            // Oluşturulan action kullanılarak fragment geçişi gerçekleştirilir.
-            Navigation.findNavController(it).navigate(transfer)
-        }
-
-        binding.departmentDeleteButton.setOnClickListener{
-
         }
 
         // binding.searchView üzerinde arama yapıldığında bu metot çağrılır.

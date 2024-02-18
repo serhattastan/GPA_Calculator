@@ -1,4 +1,4 @@
-package com.cloffygames.gpacalculator.ui
+package com.cloffygames.gpacalculator.ui.fragment
 
 import android.content.Context
 import android.os.Bundle

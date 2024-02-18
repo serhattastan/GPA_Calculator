@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.cloffygames.gpacalculator.ui.MainFragment"
+        android:name="com.cloffygames.gpacalculator.ui.fragment.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.cloffygames.gpacalculator.ui.ProfileFragment"
+        android:name="com.cloffygames.gpacalculator.ui.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -31,22 +31,22 @@
     </fragment>
     <fragment
         android:id="@+id/addDepartmentFragment"
-        android:name="com.cloffygames.gpacalculator.ui.AddDepartmentFragment"
+        android:name="com.cloffygames.gpacalculator.ui.fragment.AddDepartmentFragment"
         android:label="fragment_add_department"
         tools:layout="@layout/fragment_add_department" />
     <fragment
         android:id="@+id/semesterFragment"
-        android:name="com.cloffygames.gpacalculator.ui.SemesterFragment"
+        android:name="com.cloffygames.gpacalculator.ui.fragment.SemesterFragment"
         android:label="fragment_semester"
         tools:layout="@layout/fragment_semester" />
     <fragment
         android:id="@+id/departmentFragment"
-        android:name="com.cloffygames.gpacalculator.ui.DepartmentFragment"
+        android:name="com.cloffygames.gpacalculator.ui.fragment.DepartmentFragment"
         android:label="fragment_department"
         tools:layout="@layout/fragment_department" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.cloffygames.gpacalculator.ui.LoginFragment"
+        android:name="com.cloffygames.gpacalculator.ui.fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.cloffygames.gpacalculator.ui.RegisterFragment"
+        android:name="com.cloffygames.gpacalculator.ui.fragment.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
 </navigation>
