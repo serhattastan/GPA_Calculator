@@ -3,6 +3,9 @@ plugins {
     id("org.jetbrains.kotlin.android")
     //Navigation
     id("androidx.navigation.safeargs.kotlin")
+    //Hilt
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -58,4 +61,18 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
     //SplashScren Library
     implementation ("androidx.core:core-splashscreen:1.0.1")
+    //VievModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.6.2")
+    implementation("androidx.activity:activity-ktx:1.8.1")
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.48.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.48.1")
+    //Room
+    implementation ("androidx.room:room-runtime:2.6.0")
+    kapt("androidx.room:room-compiler:2.6.0")
+    implementation("androidx.room:room-ktx:2.6.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+}
+kapt {
+    correctErrorTypes = true
 }
