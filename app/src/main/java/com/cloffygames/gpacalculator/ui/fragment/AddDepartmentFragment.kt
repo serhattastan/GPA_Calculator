@@ -1,12 +1,12 @@
 package com.cloffygames.gpacalculator.ui.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.fragment.app.Fragment
 import com.cloffygames.gpacalculator.R
 import com.cloffygames.gpacalculator.databinding.FragmentAddDepartmentBinding
 
@@ -24,7 +24,7 @@ class AddDepartmentFragment : Fragment() {
         )
 
         // Spinner'ın açılır menüsü için bir düzen belirler
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
+        adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item)
         // Spinner'a adapter'ı uygular
         binding.spinner.adapter = adapter
 

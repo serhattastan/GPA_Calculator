@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:textAlignment="center">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/primary_color"
+        android:textColorHint="@color/secondary_color"
+        app:hintTextColor="@color/secondary_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:elevation="3dp"
+            android:hint="Ders adını giriniz..."
+            android:textColorHint="@color/secondary_color" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinnerCredit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="1"
+        android:background="@color/background_color"
+        android:backgroundTint="@color/primary_color"
+        android:dropDownSelector="@color/secondary_color"
+        android:elevation="5dp"
+        android:entries="@array/semester_array"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:popupBackground="@color/secondary_color"
+        android:popupElevation="5dp"
+        android:textAlignment="gravity" />
+
+    <Spinner
+        android:id="@+id/spinnerScore"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="1"
+        android:background="@color/background_color"
+        android:backgroundTint="@color/primary_color"
+        android:dropDownSelector="@color/secondary_color"
+        android:elevation="5dp"
+        android:entries="@array/semester_array"
+        android:popupBackground="@color/secondary_color"
+        android:textAlignment="center" />
+
+</LinearLayout>
