@@ -16,5 +16,85 @@
         <item>12</item>
     </string-array>
 
+    <string-array name="credit_array">
+        <item>0.5</item>
+        <item>1.0</item>
+        <item>1.5</item>
+        <item>2.0</item>
+        <item>2.5</item>
+        <item>3.0</item>
+        <item>3.5</item>
+        <item>4.0</item>
+        <item>4.5</item>
+        <item>5.0</item>
+        <item>5.5</item>
+        <item>6.0</item>
+        <item>6.5</item>
+        <item>7.0</item>
+        <item>7.5</item>
+        <item>8.0</item>
+        <item>8.5</item>
+        <item>9.0</item>
+        <item>9.5</item>
+        <item>10.0</item>
+        <item>10.5</item>
+        <item>11.0</item>
+    </string-array>
+
+    <string-array name="score_array_1">
+        <item>AA</item>
+        <item>BA</item>
+        <item>BB</item>
+        <item>CB</item>
+        <item>CC</item>
+        <item>DC</item>
+        <item>DD</item>
+        <item>FD</item>
+        <item>FF</item>
+    </string-array>
+
+    <string-array name="score_array_2">
+        <item>AA</item>
+        <item>AB</item>
+        <item>BA</item>
+        <item>BB</item>
+        <item>BC</item>
+        <item>CB</item>
+        <item>CC</item>
+        <item>CD</item>
+        <item>DC</item>
+        <item>DD</item>
+        <item>FF</item>
+    </string-array>
+
+    <string-array name="score_array_3">
+        <item>A</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>B-</item>
+        <item>C+</item>
+        <item>C</item>
+        <item>C-</item>
+        <item>D+</item>
+        <item>D</item>
+        <item>D-</item>
+        <item>F</item>
+    </string-array>
+
+    <string-array name="score_array_4">
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>B1</item>
+        <item>B2</item>
+        <item>B3</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+        <item>D</item>
+        <item>F</item>
+    </string-array>
+
 </resources>
 

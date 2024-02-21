@@ -24,6 +24,18 @@ class SemesterAdapter(var sContext: Context, var lessonCount : Int) : RecyclerVi
         val binding = holder.item
 
         // Bir ArrayAdapter oluşturur ve kaynak olarak bir string-array verir
+        val creditAdapter = ArrayAdapter.createFromResource(
+            sContext,
+            R.array.credit_array,
+            R.layout.spinner_item
+        )
+        // Bir ArrayAdapter oluşturur ve kaynak olarak bir string-array verir
+        val scoreAdapter = ArrayAdapter.createFromResource(
+            sContext,
+            R.array.score_array_1,
+            R.layout.spinner_item
+        )
+        // Bir ArrayAdapter oluşturur ve kaynak olarak bir string-array verir
         val adapter = ArrayAdapter.createFromResource(
             sContext,
             R.array.semester_array,
@@ -32,8 +44,8 @@ class SemesterAdapter(var sContext: Context, var lessonCount : Int) : RecyclerVi
         // Spinner'ın açılır menüsü için bir düzen belirler
         adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item)
         // Spinner'a adapter'ı uygular
-        binding.spinnerCredit.adapter = adapter
-        binding.spinnerScore.adapter = adapter
+        binding.spinnerCredit.adapter = creditAdapter
+        binding.spinnerScore.adapter = scoreAdapter
 
         // Spinner'dan seçilen değeri tutmak için bir değişken tanımlar
         var selectedCredit = "0"
@@ -42,7 +54,7 @@ class SemesterAdapter(var sContext: Context, var lessonCount : Int) : RecyclerVi
         binding.spinnerCredit.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 // Adapter'dan seçilen değeri alır ve değişkene atar
-                selectedCredit = adapter.getItem(position).toString()
+                selectedCredit = creditAdapter.getItem(position).toString()
             }
             // Spinner'da hiçbir seçim yapılmadığında bu metod çalışır
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -53,7 +65,7 @@ class SemesterAdapter(var sContext: Context, var lessonCount : Int) : RecyclerVi
         binding.spinnerScore.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 // Adapter'dan seçilen değeri alır ve değişkene atar
-                selectedCredit = adapter.getItem(position).toString()
+                selectedScore = scoreAdapter.getItem(position).toString()
             }
             // Spinner'da hiçbir seçim yapılmadığında bu metod çalışır
             override fun onNothingSelected(parent: AdapterView<*>?) {

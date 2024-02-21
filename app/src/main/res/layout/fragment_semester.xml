@@ -7,6 +7,23 @@
     android:background="@color/primary_color"
     tools:context=".ui.fragment.SemesterFragment">
 
+    <Button
+        android:id="@+id/fastCalculateButton"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Hesapla"
+        android:textColor="@color/secondary_color"
+        android:textSize="18sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:rippleColor="@color/ic_launcher_background"
+        app:strokeColor="@color/secondary_color"
+        app:strokeWidth="2dp" />
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="125dp"
@@ -16,7 +33,7 @@
         android:dropDownSelector="@color/secondary_color"
         android:elevation="5dp"
         android:entries="@array/semester_array"
-        android:popupBackground="@color/secondary_color"
+        android:popupBackground="@color/primary_color"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,5 +118,29 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="@+id/recyclerView" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/font_feather_bold"
+        android:text="GPA:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/font_feather_bold"
+        android:text="0.0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
